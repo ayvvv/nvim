@@ -8,11 +8,12 @@ M.download_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
 M.install = function()
     local file, err = io.open(M.download_path)
-
+    
     if file ~= nil then
         return
     end
 
+    -- TODO 换一种更加友好的安装方式 start
     print('installing package manager plugin [[packer]] ...')
 
     vim.fn.system({
@@ -25,29 +26,12 @@ M.install = function()
     })
 
     print('[[packer]] has been installed successful')
-
-    vim.cmd [[packadd packer.nvim]]
+    -- end
 end
 
 M.load_plugin = function(plugins)
-    function load_plugin_config()
-        for k, plugin_opt in ipairs(plugins) do
-            plugin_opt.init()
-        end
-    end
+    vim.cmd [[packadd packer.nvim]]
 
-    vim.api.nvim_command('PackerInstall')
-    
-    -- TODO  nvim 7.0 version
-    -- vim.api.nvim_create_autocmd(
-    --     "User PackerComplete",
-    --     {callback = loadPluginConfig}
-    -- )
-    vim.cmd [[autocmd User PackerComplete lua load_plugin_config()]]
-
-end
-
-M.load_plugin_config = function(plugins)
     require'packer'.startup(function(use)
         use 'wbthomason/packer.nvim'
 
@@ -57,6 +41,25 @@ M.load_plugin_config = function(plugins)
             use(plugin_opt.install_config)
         end
     end)
+    
+    vim.api.nvim_command('PackerInstall')
+
+    function load_plugin_config()
+        for k, plugin_opt in ipairs(plugins) do
+            plugin_opt.init()
+        end
+    end
+    
+    -- TODO  nvim 7.0 version
+    -- vim.api.nvim_create_autocmd(
+    --     "User PackerComplete",
+    --     {callback = loadPluginConfig}
+    -- )
+    vim.cmd [[autocmd User PackerComplete lua load_plugin_config()]]
+end
+
+M.load_plugin_config = function(plugins)
+    
 end
 
 return M

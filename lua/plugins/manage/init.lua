@@ -6,11 +6,11 @@ local MANAGE_MAP = {
 
 local M = {}
 
-M.get_and_install_manage = function(manage)
+M.get_manage = function(manage)
     manage = manage or DEFAULT_MANAGE
     plugin_manage = MANAGE_MAP[manage]
 
-    -- TODO plugin_manage 不存在抛出异常
+    -- TODO throw err if plugin is not exist
 
     plugin_manage.install()
 

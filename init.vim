@@ -2,6 +2,9 @@ lua << EOF
 require'main'.setup{}
 EOF
 
+
+
+
 " 创建悬浮窗口
 " lua << EOF
 
