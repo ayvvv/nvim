@@ -4,7 +4,6 @@ local M = {}
 
 local on_attach = function(client, bufnr)
 
-    print('on_attach');
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
   
@@ -36,27 +35,8 @@ end
 
 
 M.load = function()
-    -- TODO lsp-server install logic
-    require'lspconfig'.tsserver.setup {
-        cmd = {
-            "typescript-language-server",
-            "--stdio"
-        },
-        filetypes = {
-            "javascript",
-            "javascriptreact",
-            "javascript.jsx",
-            "typescript",
-            "typescriptreact",
-            "typescript.tsx"
-        },
-        init_options = {
-            hostInfo = "neovim"
-        },
-        root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
-        
-        on_attach = on_attach,
-        settings = {}
+    require'lspconfig'['pyright'].setup{
+        on_attach = on_attach
     }
 
 end

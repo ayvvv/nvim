@@ -55,6 +55,7 @@ M.load_plugin = function(plugins)
     --     "User PackerComplete",
     --     {callback = loadPluginConfig}
     -- )
+    --
     vim.cmd [[autocmd User PackerComplete lua load_plugin_config()]]
 end
 
