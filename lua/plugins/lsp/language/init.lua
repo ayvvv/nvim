@@ -7,7 +7,7 @@ local languages = {
     require('plugins/lsp/language/python'),
     -- require('plugins/lsp/language/golang'),
 
-    -- require('plugins/lsp/language/typescript'),
+    require('plugins/lsp/language/typescript'),
     -- require('plugins/lsp/language/vue'),
     -- require('plugins/lsp/language/vue3'),
     -- require('plugins/lsp/language/react'),

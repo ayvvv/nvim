@@ -16,3 +16,6 @@ vim.api.nvim_set_keymap('v', 'i', 'l', map_opt);
 vim.api.nvim_set_keymap('n', '<C-w>n', '<C-w>j', map_opt);
 vim.api.nvim_set_keymap('n', '<C-w>e', '<C-w>k', map_opt);
 vim.api.nvim_set_keymap('n', '<C-w>i', '<C-w>l', map_opt);
+
+-- insert
+vim.api.nvim_set_keymap('n', 'u', 'i', map_opt);

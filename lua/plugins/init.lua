@@ -3,7 +3,12 @@ local PLUGIN_LIST = {
     require('plugins/file-explorer/nvim-tree'),
     require('plugins/themes/oceanic'),
     require('plugins/lsp/nvim-lspconfig'),
-    require('plugins/lsp/cmp/nvim-cmp')
+    require('plugins/lsp/cmp/nvim-cmp'),
+    require('plugins/fuzzy-finder/telescope'),
+    require('plugins/ast/nvim-treesitter'),
+    require('plugins/markdown/iamcco-markdown'),
+    require('plugins/pairs/auto-pairs'),
+    require('plugins/term/floaterm')
 }
 
 local M = {}

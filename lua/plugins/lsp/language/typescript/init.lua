@@ -4,7 +4,6 @@ local M = {}
 
 local on_attach = function(client, bufnr)
 
-    print('on_attach');
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
   
@@ -53,7 +52,7 @@ M.load = function()
         init_options = {
             hostInfo = "neovim"
         },
-        root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
+        root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git", ''),
         
         on_attach = on_attach,
         settings = {}
