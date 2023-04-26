@@ -1,7 +1,7 @@
 -- TODO auto get plugin list
 local PLUGIN_LIST = {
     require('plugins/file-explorer/nvim-tree'),
-    require('plugins/themes/oceanic'),
+    require('plugins/themes/catppuccin'),
     require('plugins/lsp/nvim-lspconfig'),
     require('plugins/lsp/cmp/nvim-cmp'),
     require('plugins/fuzzy-finder/telescope'),

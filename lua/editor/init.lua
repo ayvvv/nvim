@@ -13,3 +13,5 @@ vim.api.nvim_set_keymap('n', '<space>n', '<C-w>j', { noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '<space>e', '<C-w>k', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<space>i', '<C-w>l', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<space>h', '<C-w>h', { noremap = true, silent = true })
+
+vim.api.nvim_set_option('matchpairs', '{:},[:],(:),<:>')

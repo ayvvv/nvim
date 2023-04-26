@@ -1,7 +1,11 @@
-local DEFAULT_MANAGE = 'packer'
-local PACKER_MANAGE = require'plugins/manage/packer'
+local DEFAULT_MANAGE = 'lazy'
+
+local packer_manage = require'plugins/manage/packer'
+local lazy_manage = require'plugin/manage/lazy'
+
 local MANAGE_MAP = {
-    [PACKER_MANAGE.name] = PACKER_MANAGE
+    [packer_manage.name] = packer_manage,
+    [lazy_manage.name] = lazy_manage
 }
 
 local M = {}

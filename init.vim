@@ -15,7 +15,6 @@ nnoremap g7 :tabnext 7<CR>
 nnoremap g8 :tabnext 8<CR>
 nnoremap g9 :tabnext 9<CR>
 
-
 " 创建悬浮窗口
 " lua << EOF
 

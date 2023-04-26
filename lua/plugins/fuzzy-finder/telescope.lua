@@ -18,7 +18,7 @@ M.init = function()
     require('telescope').load_extension('cd')
 
     keymap('n', leader..'/f', ':lua telescope.find_files()<CR>', { noremap = true, silent = true })
-    keymap('n', leader..'/l', ':lua telescope.live_grep()<CR>', { noremap = true, silent = true })
+    keymap('n', leader..'/w', ':lua telescope.live_grep()<CR>', { noremap = true, silent = true })
     keymap('n', leader..'/b', ':lua telescope.buffers()<CR>', { noremap = true, silent = true })
     keymap('n', leader..'/h', ':lua telescope.help_tags()<CR>', { noremap = true, silent = true })
     keymap('n', leader..'/c', ':Telescope cd<CR>', { noremap = true, silent = true })

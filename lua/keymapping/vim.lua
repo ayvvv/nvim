@@ -12,6 +12,14 @@ vim.api.nvim_set_keymap('v', 'n', 'j', map_opt);
 vim.api.nvim_set_keymap('v', 'e', 'k', map_opt);
 vim.api.nvim_set_keymap('v', 'i', 'l', map_opt);
 
+vim.api.nvim_set_keymap('n', 'k', 'e', map_opt);
+vim.api.nvim_set_keymap('n', 'K', 'E', map_opt);
+vim.api.nvim_set_keymap('n', 'l', 'u', map_opt);
+vim.api.nvim_set_keymap('n', 'gk', 'ge', map_opt);
+vim.api.nvim_set_keymap('n', 'gK', 'gE', map_opt);
+
+vim.api.nvim_set_keymap('n', '.', ';', map_opt);
+
 -- window move
 vim.api.nvim_set_keymap('n', '<C-w>n', '<C-w>j', map_opt);
 vim.api.nvim_set_keymap('n', '<C-w>e', '<C-w>k', map_opt);

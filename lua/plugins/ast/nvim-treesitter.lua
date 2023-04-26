@@ -22,7 +22,7 @@ M.init = function()
 
         highlight = {
           -- `false` will disable the whole extension
-          enable = true,
+          enable = false,
 
           -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
           -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
@@ -35,6 +35,10 @@ M.init = function()
           -- Instead of true it can also be a list of languages
           additional_vim_regex_highlighting = false,
         },
+
+        indent = {
+            enable = true
+        }
     }
 
     -- vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEnter'}, {
